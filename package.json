@@ -9,12 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.8",
     "@vue/reactivity": "^3.2.37",
     "element-plus": "^2.2.12",
     "path": "^0.12.7",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
     "unplugin-element-plus": "^0.4.1",
+    "unplugin-icons": "^0.14.8",
+    "vite-plugin-inspect": "^0.6.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },
