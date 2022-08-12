@@ -20,10 +20,9 @@
 </template>
 
 <script lang="ts">
-import { reactive,toRaw } from "vue";
+import { reactive } from "vue";
 import { useRouter } from "vue-router";
 import { getUserInfo } from "@/api/login";
-import { loginUserInt } from "@/types/login";
 
 class FormInline {
     user: string = "";
@@ -35,13 +34,9 @@ export default {
         const form = reactive(new FormInline);
         const route = useRouter();
         const onSubmit = async() => {
-            // window.sessionStorage.setItem('token', '1');
-            
-            
-            const response = await getUserInfo(form);
-            // console.log(response);
-            
-            // route.push({ path: '/home' });
+            const {data} = await getUserInfo(form);
+            window.sessionStorage.setItem('token',data)
+            route.push({ path: '/home' });
         }
 
         return {
